@@ -6,24 +6,17 @@ from collections.abc import Iterable
 from functools import lru_cache
 from ipaddress import ip_address
 import logging
-from typing import Final
 from urllib.parse import quote
 
 import aiohttp
 from aiohttp import ClientTimeout, hdrs, web
 from aiohttp.web_exceptions import HTTPBadGateway, HTTPBadRequest
 from multidict import CIMultiDict
-import voluptuous as vol
 from yarl import URL
 
-from homeassistant.components.device_tracker import (
-    PLATFORM_SCHEMA as BASE_PLATFORM_SCHEMA,
-)
 from homeassistant.components.http import HomeAssistantView
-from homeassistant.const import CONF_HOST
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
-import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.typing import ConfigType
 
 
@@ -40,11 +33,11 @@ async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
 _LOGGER = logging.getLogger(__name__)
 
 
-PLATFORM_SCHEMA: Final = BASE_PLATFORM_SCHEMA.extend(
-    {
-        vol.Required(CONF_HOST): cv.string,
-    }
-)
+# PLATFORM_SCHEMA: Final = BASE_PLATFORM_SCHEMA.extend(
+#     {
+#         vol.Required(CONF_HOST): cv.string,
+#     }
+# )
 
 
 @callback
