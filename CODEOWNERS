@@ -1068,6 +1068,8 @@ build.json @home-assistant/supervisor
 /tests/components/screenlogic/ @dieselrabbit @bdraco
 /homeassistant/components/script/ @home-assistant/core
 /tests/components/script/ @home-assistant/core
+/homeassistant/components/scrypted/ @koush
+/tests/components/scrypted/ @koush
 /homeassistant/components/search/ @home-assistant/core
 /tests/components/search/ @home-assistant/core
 /homeassistant/components/season/ @frenck

@@ -6622,6 +6622,12 @@
       "integration_type": "helper",
       "config_flow": false
     },
+    "scrypted": {
+      "name": "Scrypted",
+      "integration_type": "helper",
+      "config_flow": true,
+      "iot_class": "local_push"
+    },
     "switch_as_x": {
       "integration_type": "helper",
       "config_flow": true,
